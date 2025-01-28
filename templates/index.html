@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
+    <!-- Cabeçalho -->
    <header class="cabecalho container">
+        <!-- Logo -->
         <img src="{{ url_for('static', filename='img/logo-chatbot.svg') }}" alt="Logo Chatbot">
         <div class="cabecalho__acoes">
             
         </div>
    </header> 
+   <!-- Conteúdo Principal -->
    <main class="main">
         <section class="chat container" id="chat">
             <p class="chat__bolha chat__bolha--bot">
@@ -20,12 +23,16 @@
                 Como posso te ajudar?
             </p>
         </section>
+        <!-- Entrada -->
         <section class="entrada container">
             <div class="entrada__container">
+                <!-- Botão Mais -->
                 <button id="mais_arquivo" aria-label="Botão de mais opções">
                     <i class="icone icone--mais-opcoes"></i>
                 </button>
+                <!-- Entrada de Texto -->
                 <input type="text" class="entrada__input" placeholder="Enviar uma mensagem" id="input">
+                <!-- Botão de Envio -->
                 <button aria-label="Botão de enviar" id="botao-enviar">
                     <i class="icone icone--enviar-mensagem"></i>
                 </button>
@@ -34,5 +41,6 @@
    </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Index.js => Gerenciamento do Backend e comunicação com elementos visuais -->
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </html>
